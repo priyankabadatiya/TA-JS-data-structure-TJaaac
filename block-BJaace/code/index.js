@@ -35,7 +35,7 @@ colors[colors.length] = "purple";
 colors.unshift('gray');
 
 // 13. Remove the first color from the starting of the array
-colors.shift(colors[0]);
+delete colors[0]
 
 // 14. Remove the last color from the end of list, and then print the length of the array to the console one more time.
 delete colors[colors.length - 1];
@@ -60,8 +60,8 @@ for (let color of colors) {
 }
 
 // 19. Create a variable named lastColor that will always point to the last element of the colors array, no matter how many colors are in the list. (Hint: make use of the array's length property for this!)
-var lastColor =
+var lastColor = colors[colors.length - 1];
 
-    // 20. Add a new color `tomato` to the index 45. And check the length of the array. Use `console.log` to print.
-    colors[45] = "tomato";
+// 20. Add a new color `tomato` to the index 45. And check the length of the array. Use `console.log` to print.
+colors[45] = "tomato";
 console.log(colors.length);
