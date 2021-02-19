@@ -1,17 +1,17 @@
 // 1. Create an array named numbers and store 5 number values in it
-let numbers = [23, 1, 4, 78, 89, ];
+let numbers = [20, 3, 4, 78, 88, ];
 
 // 2. Calculate the sum of array items and print it to the console using console.log()
 let sum = 0;
-for (let i = 0; i < numbers.length; i++) {
-    console.log((sum += numbers[i]));
+for (let number of numbers) {
+    sum += number;
 }
 
 // 3. Calculate the average of array items and print it to the console using console.log()
+console.log(sum / numbers.length)
 
 // 4. Find the highest number in the array and print it to the console using console.log()
 let highestNumber = numbers[0];
-
 for (let number of numbers) {
     if (number > highestNumber) {
         highestNumber = number;
@@ -20,7 +20,6 @@ for (let number of numbers) {
 
 // 5. Find the lowest number in the array and print it to the console using console.log()
 let lowestNumber = numbers[0];
-
 for (let number of numbers) {
     if (number < lowestNumber) {
         lowestNumber = number;
@@ -28,9 +27,9 @@ for (let number of numbers) {
 }
 
 // 6. Find the even numbers in the array and print them to the console using console.log()
-for (let i = 0; i < numbers.length; i++) {
-    if (numbers[i] % 2 === 0) {
-        console.log(numbers[i]);
+for (let number of numbers) {
+    if (number % 2 == 0) {
+        console.log(number);
     }
 }
 
