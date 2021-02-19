@@ -142,7 +142,7 @@ for (let movie of movies) {
 
 // 30. Log the name of all the movies with year `2018`
 for (let movie of movies) {
-    if (movie.years == 2018) {
+    if (movie.year === '2018') {
         console.log(movie.title);
     }
 }
