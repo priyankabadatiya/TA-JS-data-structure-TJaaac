@@ -33,4 +33,4 @@ let newUser = user;
 - `brothersCopy === user.sibling;` // true memory location of brothers and allBrothers are same.
 - `brothersCopy[0] === user.sibling[0];` // true  memory location of brothers and allBrothers are same and the value and data type of 0th index is same in both the variables.
 - `brothersCopy[1] === user.sibling[1];` // true  memory location of brothers and allBrothers are same and  the value and data type of 1st index is same in both the variables.
-- `user.sibling[1] === newUser.sibling[1];` // true  memory location of user.sibling[1] andnewUser.sibling[1] are same and  the value and data type of 1st index is same in both the variables.
+- `user.sibling[1] === newUser.sibling[1];` // true  memory location of user.sibling[1] and newUser.sibling[1] are same and  the value and data type of 1st index is same in both the variables.
