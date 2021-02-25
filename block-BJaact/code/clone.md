@@ -10,12 +10,12 @@ let person2 = person;
 
 person.firstName = 'Arya';
 
-console.log(person2.firstName); // output
-console.log(person.firstName); // output
-console.log(person.lastName); // output
-console.log(person == person2); // output
-console.log(person === person2); // output
-console.log(person.lastName === person2.lastName); // output
+console.log(person2.firstName);  Arya (because person2 = person and person.firstName = 'Arya'.)
+console.log(person.firstName);  Arya (because the value is copied by reference.)
+console.log(person.lastName);  Doe (beacause given lastName: 'Doe'.)
+console.log(person == person2); true (they have the same address.)
+console.log(person === person2); true (they have the same address and data type.)
+console.log(person.lastName === person2.lastName); true  (they have the same address and data type.)
 ```
 
 2. Write the output with reason:
@@ -37,17 +37,17 @@ let personTwo = { ...person };
 person.firstName = 'Arya';
 person.city = 'Navada';
 
-console.log(personTwo.firstName); // output
-console.log(person.firstName); // output
-console.log(personTwo.lastName); // output
-console.log(person.firstName === personTwo.firstName); // output
-console.log(person == personTwo); // output
-console.log(person === personTwo); // output
-console.log(person.address === personTwo.address); // output
-console.log(person.address == personTwo.address); // output
-console.log(personTwo.address.city); // output
-console.log(person.address.city); // output
-console.log(person.address.city == personTwo.address.city); // output
+console.log(personTwo.firstName); john(beacause its cloning the address are different.)
+console.log(person.firstName); Arya(because  the has been changed to arya)
+console.log(personTwo.lastName); doe(because given lastName: 'Doe'. )
+console.log(person.firstName === personTwo.firstName); false(because the address and value  are completely different)
+console.log(person == personTwo); false (becausethey have different memory address. )
+console.log(person === personTwo); false (because have different memory address and values, datatypes.)
+console.log(person.address === personTwo.address); true(because the value of address has been not changed.)
+console.log(person.address == personTwo.address); true(because the value of address has been not changed.)
+console.log(personTwo.address.city); sanJose(because the value stored in person is a memory location and the location is same for both the address for person and person2. )
+console.log(person.address.city); sanJose (because the value stored in person is a memory location and the location is same for both the address for person and person2.)
+console.log(person.address.city == personTwo.address.city);true (because the value of address is not changed)
 ```
 
 3. Write the output with reason:
@@ -69,18 +69,17 @@ let personTwo = { ...person, address: { ...person.address } };
 person.firstName = 'Arya';
 person.city = 'Navada';
 
-console.log(personTwo.firstName); // output
-console.log(person.firstName); // output
-console.log(personTwo.lastName); // output
-console.log(person.firstName === personTwo.firstName); // output
-console.log(person == personTwo); // output
-console.log(person === personTwo); // output
-console.log(person.address === personTwo.address); // output
-console.log(person.address == personTwo.address); // output
-console.log(personTwo.address.city); // output
-console.log(person.address.city); // output
-console.log(person.address.city == personTwo.address.city); // output
-```
+console.log(personTwo.firstName); john (because they have different memory address. )
+console.log(person.firstName); Arya (because  they have different memory address. ))
+console.log(personTwo.lastName); Doe(because the value has not been changed. )
+console.log(person.firstName === personTwo.firstName); false (because they have different memory address. )
+console.log(person == personTwo); false (because they have different memory address.)
+console.log(person === personTwo); false (because they have different memory address.)
+console.log(person.address === personTwo.address); false (because they have different memory address.)
+console.log(person.address == personTwo.address); false (because  they have different memory address.)
+console.log(personTwo.address.city); sanJose(because it had not changed the value of city inside address. )
+console.log(person.address.city); sanJose(because)
+console.log(person.address.city == personTwo.address.city); true
 
 4. Clone the `blogs` variable into a new variable named `clonedBlogs`
 
@@ -103,7 +102,7 @@ let blogs = [
   },
 ];
 
-// Your code goes here
+let clonedBlogs = [...blogs];
 ```
 
 5. Clone the `question` variable into a new variable named `questionClone`
@@ -128,7 +127,7 @@ var questions = [
   },
 ];
 
-// Your code goes here
+let questionClone = [...questions];
 ```
 
 6. Clone the `allBlogs` variable into a new variable named `allBlogsClone`
@@ -155,7 +154,7 @@ var allBlogs = {
   ],
 };
 
-// Your code goes here
+let allBlogsClone = [...allBlogs];
 ```
 
 7. Clone the `person` variable into a new variable named `clonedPerson`
@@ -188,14 +187,14 @@ let person = [
   },
 ];
 
-// Your code goes here
+ let clonedPerson = [...person];
 ```
 
 8. Write a function named `cloneObject` that accepts an object and returns the clone of the object
 
 ```js
-function cloneObject() {
-  // your code
+function cloneObject(object) {
+   return { ...object };
 }
 
 // Run the test below to check your function
@@ -225,9 +224,11 @@ console.log(
     user == cloned ? `not clone` : `cloned successfully 😁👑`
   }`
 );
+(The user object is cloned succesfully);
 console.log(
   `The person object is ${
     person == clonedPerson ? `not clone` : `cloned successfully 😁👑`
   }`
 );
+(the person object is cloned succesfully);
 ```
